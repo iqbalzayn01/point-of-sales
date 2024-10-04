@@ -1,9 +1,14 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
+import { RouterView } from 'vue-router';
+
+import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-  <HelloWorld msg="Home!" class="text-3xl font-bold underline" />
+  <div class="h-screen flex">
+    <Sidebar />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped></style>

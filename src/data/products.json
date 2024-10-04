@@ -1,0 +1,22 @@
+[
+  {
+    "_id": 1,
+    "product_name": "Laptop",
+    "product_price": 5000000
+  },
+  {
+    "_id": 2,
+    "product_name": "Handphone",
+    "product_price": 2500000
+  },
+  {
+    "_id": 3,
+    "product_name": "Keyboard",
+    "product_price": 450000
+  },
+  {
+    "_id": 4,
+    "product_name": "Mouse",
+    "product_price": 650000
+  }
+]
