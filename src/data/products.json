@@ -1,22 +1,32 @@
 [
   {
-    "_id": 1,
+    "id": 1,
     "product_name": "Laptop",
     "product_price": 5000000
   },
   {
-    "_id": 2,
+    "id": 2,
     "product_name": "Handphone",
     "product_price": 2500000
   },
   {
-    "_id": 3,
+    "_d": 3,
     "product_name": "Keyboard",
     "product_price": 450000
   },
   {
-    "_id": 4,
+    "id": 4,
     "product_name": "Mouse",
     "product_price": 650000
+  },
+  {
+    "id": 5,
+    "product_name": "Monitor",
+    "product_price": 2500000
+  },
+  {
+    "id": 6,
+    "product_name": "CPU",
+    "product_price": 6500000
   }
 ]

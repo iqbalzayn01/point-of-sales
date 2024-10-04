@@ -6,21 +6,6 @@ import { RouterLink } from 'vue-router';
   <aside class="w-full max-w-[192px] p-2 mx-0 my-2 rounded-xl">
     <div class="w-full flex items-center px-2 mb-5">
       <h1 class="text-5xl text-white font-extrabold">Point of Sales</h1>
-      <!-- <button
-        class="hover:bg-zinc-900 flex items-center justify-center p-2 rounded-lg"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#ffffff"
-        >
-          <path
-            d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"
-          />
-        </svg>
-      </button> -->
     </div>
     <nav class="w-full flex flex-col gap-1">
       <RouterLink

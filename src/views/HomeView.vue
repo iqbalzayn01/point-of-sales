@@ -1,6 +1,38 @@
 <script setup>
-import FormProducts from '../components/FormProducts.vue';
+import { ref } from 'vue';
+import SelectProducts from '../components/SelectProducts.vue';
 import Tables from '../components/Tables.vue';
+
+import {
+  addItemToCart,
+  removeItemFromCart,
+  calculateSubTotal,
+  saveLocalStorage,
+} from '../utils/services';
+
+const cart = ref([]);
+const subtotal = ref(0);
+
+const addProduct = (item) => {
+  cart.value = addItemToCart(cart.value, item);
+  subtotal.value = calculateSubTotal(cart.value);
+};
+
+const deleteProduct = (id) => {
+  cart.value = removeItemFromCart(cart.value, id);
+  subtotal.value = calculateSubTotal(cart.value);
+};
+
+const clearAll = () => {
+  cart.value = [];
+  subtotal.value = 0;
+};
+
+const saveCart = () => {
+  saveLocalStorage(cart.value);
+  cart.value = [];
+  subtotal.value = 0;
+};
 </script>
 
 <template>
@@ -15,10 +47,16 @@ import Tables from '../components/Tables.vue';
         </p>
       </div>
       <div class="p-10">
-        <FormProducts />
+        <SelectProducts @add-to-cart="addProduct" />
       </div>
       <div class="px-10">
-        <Tables />
+        <Tables
+          :cart="cart"
+          :subtotal="subtotal"
+          :clear="clearAll"
+          :saveLocalStorage="saveCart"
+          @delete-item="deleteProduct"
+        />
       </div>
     </div>
   </main>
