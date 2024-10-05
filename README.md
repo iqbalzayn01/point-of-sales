@@ -1,5 +1,32 @@
-# Vue 3 + Vite
+# Sistem Point of Sales
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Sistem Point of Sales ini adalah aplikasi manajemen penjualan yang memudahkan pengguna dalam mengelola transaksi, produk, dan laporan penjualan.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Instalasi
+
+1. Klon repositori:
+
+```
+git clone https://github.com/iqbalzayn01/point-of-sales.git nama_folder
+```
+
+2. Instal dependensi:
+
+```
+cd point-of-sales
+npm install
+```
+
+3. Jalankan project:
+
+```
+npm run dev
+# buka browser dan kunjungi http://localhost:3000
+```
+
+### Alat yang Digunakan
+
+- [Vue](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [xlsx](https://www.npmjs.com/package/xlsx)
+- [TailwindCSS](https://tailwindcss.com/)
