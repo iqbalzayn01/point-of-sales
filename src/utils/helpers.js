@@ -1,3 +1,5 @@
+import * as XLSX from 'xlsx';
+
 export const formatCurrency = (value) => {
   return new Intl.NumberFormat('id-ID', {
     style: 'currency',
@@ -8,14 +10,14 @@ export const formatCurrency = (value) => {
 export const convertToReadableDatetime = (datetimeString) => {
   const date = new Date(datetimeString);
 
-  // Tanggal
+  // Date
   const dateOptions = {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   };
 
-  // Waktu
+  // Time
   const timeOptions = {
     hour: '2-digit',
     minute: '2-digit',
@@ -23,9 +25,17 @@ export const convertToReadableDatetime = (datetimeString) => {
     hour12: false,
   };
 
-  // Format tanggal dan waktu secara terpisah
   const formattedDate = date.toLocaleDateString('id-ID', dateOptions);
   const formattedTime = date.toLocaleTimeString('id-ID', timeOptions);
 
   return `${formattedDate}, ${formattedTime}`;
+};
+
+export const exportToExcel = (data, filename = 'report.xlsx') => {
+  // Buat worksheet dari data
+  const worksheet = XLSX.utils.json_to_sheet(data);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Report');
+
+  XLSX.writeFile(workbook, filename);
 };

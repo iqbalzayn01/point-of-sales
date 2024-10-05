@@ -44,7 +44,8 @@ const saveCart = () => {
       <div class="border-b border-zinc-800 p-10">
         <h1 class="text-3xl text-white font-bold mb-2">Dashboard</h1>
         <p class="text-white">
-          An any way to manage sales with care and precision.
+          Aplikasi kami dirancang untuk memberikan solusi lengkap dalam
+          mengelola penjualan Anda.
         </p>
       </div>
       <div class="p-10">

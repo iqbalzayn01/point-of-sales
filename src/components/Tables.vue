@@ -38,7 +38,7 @@ const props = defineProps({
         <td class="text-white p-3 border border-zinc-800">{{ index + 1 }}</td>
         <td class="text-white p-3 border border-zinc-800">
           {{
-            convertToReadableDatetime(item.report_datetime) || item.product_name
+            item.product_name || convertToReadableDatetime(item.report_datetime)
           }}
         </td>
         <td class="text-white p-3 border border-zinc-800">
