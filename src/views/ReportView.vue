@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import Tables from '../components/Tables.vue';
+
+const reportData = ref([]);
+
+onMounted(() => {
+  const transactions = localStorage.getItem('transactions');
+  if (transactions) {
+    reportData.value = JSON.parse(transactions);
+  }
+});
+</script>
 
 <template>
   <main
@@ -10,6 +22,14 @@
         <p class="text-white">
           An any way to manage sales with care and precision.
         </p>
+      </div>
+      <div class="p-10">
+        <Tables
+          :headers="['No.', 'Tanggal & Jam', 'Subtotal']"
+          :data="reportData"
+          :subtotal="null"
+          :showActions="false"
+        />
       </div>
     </div>
   </main>

@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import SelectProducts from '../components/SelectProducts.vue';
 import Tables from '../components/Tables.vue';
+import ClearAndSave from '../components/ClearAndSave.vue';
 
 import {
   addItemToCart,
@@ -51,12 +52,18 @@ const saveCart = () => {
       </div>
       <div class="px-10">
         <Tables
-          :cart="cart"
+          :headers="['No.', 'Nama Produk', 'Qty', 'Total Harga']"
+          :data="cart"
           :subtotal="subtotal"
           :clear="clearAll"
           :saveLocalStorage="saveCart"
+          :showActions="true"
           @delete-item="deleteProduct"
         />
+      </div>
+      <!-- Clear dan Save Button -->
+      <div class="px-10">
+        <ClearAndSave :clear="clearAll" :saveLocalStorage="saveCart" />
       </div>
     </div>
   </main>
